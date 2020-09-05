@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "936028713445",
+    "firebase_url": "https://home-automation-4353d.firebaseio.com",
+    "project_id": "home-automation-4353d",
+    "storage_bucket": "home-automation-4353d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936028713445:android:3c5104ef30898f23467f0c",
+        "android_client_info": {
+          "package_name": "com.viba.homeautomation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936028713445-3kqa6378i7cie71h2trk6dn21curqphc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrwXrXDGOe10gsloKpkGIA2FJD591vO0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936028713445-3kqa6378i7cie71h2trk6dn21curqphc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

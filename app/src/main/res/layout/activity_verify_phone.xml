@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/white"
+    tools:context=".VerifyPhoneActivity"
+    android:orientation="vertical">
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="20dp"
+            android:id="@+id/relala">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/verifyImage"
+                android:src="@drawable/checked"
+                android:layout_margin="10dp"/>
+
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/verifyImage">
+
+
+                    <TextView
+                        android:id="@+id/verifyotp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/averia_sans_libre_bold"
+                        android:text="Verify"
+                        android:textAlignment="center"
+                        android:textColor="#581c0c"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textf"
+                        android:layout_width="209dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/verifyotp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/averia_sans_libre_light"
+                        android:inputType="textMultiLine"
+                        android:text="OTP has been sent to your Mobile number, Please Verify"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/editTextCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textf"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/edit_design"
+                        android:fontFamily="@font/averia_sans_libre_bold"
+                        android:gravity="center"
+                        android:hint="Code"
+                        android:inputType="phone"
+                        android:layout_centerHorizontal="true"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp">
+
+                        <requestFocus />
+                    </EditText>
+
+                    <Button
+                        android:id="@+id/buttonSignIn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="327dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editTextCode"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="15sp"
+                        android:layout_marginEnd="25sp"
+                        android:layout_marginBottom="30sp"
+                        android:background="@drawable/button_style"
+                        android:fontFamily="@font/averia_sans_libre_light"
+                        android:gravity="center"
+                        android:text="Verify"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+</RelativeLayout>

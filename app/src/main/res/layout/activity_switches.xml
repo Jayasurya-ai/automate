@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Switches">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardCornerRadius="20dp"
+        android:visibility="gone"
+        android:id="@+id/carda"
+        android:layout_margin="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/onof2"
+            android:background="@android:color/darker_gray">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Switch name"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/switchname1"
+                android:textColor="@android:color/black"/>
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:textOff="OFF"
+                android:textOn="ON"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardCornerRadius="20dp"
+        android:visibility="gone"
+        android:id="@+id/carb"
+        android:layout_margin="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/onof"
+            android:background="@android:color/darker_gray">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Switch name"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/switchname2"
+                android:textColor="@android:color/black"/>
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:textOff="OFF"
+                android:textOn="ON"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardCornerRadius="20dp"
+        android:visibility="gone"
+        android:id="@+id/carc"
+        android:layout_margin="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/onof3"
+            android:background="@android:color/darker_gray">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Switch name"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/switchname3"
+                android:textColor="@android:color/black"/>
+            <Switch
+                android:id="@+id/switch3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:textOff="OFF"
+                android:textOn="ON"/>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:cardCornerRadius="20dp"
+            android:visibility="gone"
+            android:id="@+id/card"
+            android:layout_margin="10dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/onof4"
+                android:background="@android:color/darker_gray">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Switch name"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:id="@+id/switchname4"
+                    android:textColor="@android:color/black"/>
+                <Switch
+                    android:id="@+id/switch4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:textOff="OFF"
+                    android:textOn="ON"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/navigation_addedswiches"
+        android:padding="1dp"
+        android:fitsSystemWindows="true"
+        app:itemTextColor="@android:color/white"
+        app:itemIconTint="@android:color/white"
+        android:layout_alignParentBottom="true"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_nav_menu"/>
+
+</RelativeLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/white"
+    tools:context=".Register"
+    android:orientation="vertical">
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:id="@+id/regOtpimage"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/register"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/regOtpimage"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/verifyotp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/averia_sans_libre_bold"
+                        android:text="Register"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textf"
+                        android:layout_width="209dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/verifyotp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/averia_sans_libre_light"
+                        android:inputType="textMultiLine"
+                        android:text="Regsiter and light your life!"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/linReg"
+                        android:layout_below="@+id/textf">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/usernameReg"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:background="@drawable/edit_design"
+                                android:paddingStart="15dp"
+                                android:fontFamily="@font/averia_sans_libre_light"
+                                android:maxLines="1"
+                                android:hint="User Name"
+                                android:singleLine="true"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+
+
+
+
+                        <requestFocus />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp">
+
+                            <EditText
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editCode"
+                                android:textSize="12dp"
+                                android:paddingStart="15dp"
+                                android:background="@drawable/edit_design"/>
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/numer"
+                                android:inputType="number"
+                                android:textSize="12dp"
+                                android:layout_toEndOf="@id/editCode"
+                                android:layout_marginStart="10dp"
+                                android:hint="Mobile Number"
+                                android:paddingStart="15dp"
+                                android:background="@drawable/edit_design"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/continueReg"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="327dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linReg"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="15sp"
+                        android:layout_marginEnd="25sp"
+                        android:layout_marginBottom="30sp"
+                        android:background="@drawable/button_style"
+                        android:fontFamily="@font/averia_sans_libre_light"
+                        android:gravity="center"
+                        android:text="Continue"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/spotlight"
+    tools:context=".HomeActivity">
+
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Automate your life"
+            android:id="@+id/textadd"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonstyle"
+            android:text="Add Device"
+            android:padding="15dp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:layout_below="@+id/textadd"
+            android:id="@+id/addcomp"/>
+
+
+        <!--        <RelativeLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:background="@android:color/white">-->
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="Switch2"-->
+        <!--                android:textStyle="bold"-->
+        <!--                android:textSize="25sp"-->
+        <!--                android:textColor="@android:color/black"-->
+        <!--                android:layout_centerVertical="true"-->
+        <!--                android:id="@+id/switch2"/>-->
+        <!--            <EditText-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:hint="Switchname"-->
+        <!--                android:textColorHint="@android:color/white"-->
+        <!--                android:layout_toEndOf="@+id/switch2"-->
+        <!--                android:id="@+id/editswitch2"-->
+        <!--                android:layout_marginStart="50dp"/>-->
+        <!--            <Button-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_alignParentEnd="true"-->
+        <!--                android:layout_centerVertical="true"-->
+        <!--                android:text="Add"-->
+        <!--                android:id="@+id/addSwitch2"-->
+        <!--                android:textColor="@android:color/white"-->
+        <!--                android:background="@android:color/black"/>-->
+
+        <!--        </RelativeLayout>-->
+        <!--    </LinearLayout>-->
+
+
+        <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/compb"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:text="Light"/>-->
+
+        <!--    <Button-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:id="@+id/compc"-->
+        <!--        android:layout_margin="10dp"-->
+        <!--        android:text="Charger"/>-->
+       <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/navigation_home"
+        android:padding="1dp"
+        android:fitsSystemWindows="true"
+        app:itemTextColor="@android:color/white"
+        app:itemIconTint="@android:color/white"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        android:layout_alignParentBottom="true"
+
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_nav_menu"/>
+
+
+</RelativeLayout>
