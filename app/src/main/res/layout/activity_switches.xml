@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         app:cardCornerRadius="20dp"
-        android:visibility="gone"
+        android:visibility="visible"
         android:id="@+id/carda"
         android:layout_margin="10dp">
         <RelativeLayout
@@ -53,7 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         app:cardCornerRadius="20dp"
-        android:visibility="gone"
+        android:visibility="visible"
         android:id="@+id/carb"
         android:layout_margin="10dp">
         <RelativeLayout
@@ -92,7 +92,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         app:cardCornerRadius="20dp"
-        android:visibility="gone"
+        android:visibility="visible"
         android:id="@+id/carc"
         android:layout_margin="10dp">
         <RelativeLayout

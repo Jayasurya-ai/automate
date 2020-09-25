@@ -4,40 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@android:color/black"
     tools:context=".MainActivity">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            android:layout_marginTop="-70dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/register_designb" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/autoa"
-        android:id="@+id/imagea"
-        android:layout_above="@id/automatetxt"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            android:layout_marginTop="-90dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/register_designa" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            android:layout_marginTop="-120dp"
+            android:id="@+id/design3"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:src="@drawable/register_design" />
 
+
+        <TextView
+            android:id="@+id/automatetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/design3"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="20dp"
+            android:text="THE VIBE"
+            android:textColor="#186363"
+            android:textSize="70sp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/averia_sans_libre_bold"
-        android:text="Automate your life"
-        android:textColor="@android:color/black"
-        android:textSize="25sp"
-        android:id="@+id/automatetxt"
-        android:layout_above="@id/googlesign"
+        android:text="EXPERIENCE LIVING"
+        android:textSize="25dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"/>
+        android:layout_below="@+id/automatetxt"
+        android:textColor="#303737"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="50dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
 
     <Button
         android:id="@+id/googlesign"
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
-        android:layout_above="@+id/phonesignin"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/button_style"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/button_styleb"
         android:fontFamily="@font/averia_sans_libre_bold"
         android:onClick="googlesignin"
         android:text="Sign up with Google"
@@ -51,14 +78,11 @@
         android:layout_marginBottom="20dp"
         android:text="Sign up with Phone"
         android:id="@+id/phonesignin"
-        android:layout_alignParentBottom="true"
         android:textColor="@android:color/white"
         android:textSize="17dp"
         android:onClick="phonesignin"
         android:fontFamily="@font/averia_sans_libre_bold"
         android:textAllCaps="false"
-
         android:background="@drawable/button_styleb"/>
-
-
+        </LinearLayout>
 </RelativeLayout>

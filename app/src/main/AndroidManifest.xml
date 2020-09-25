@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.viba.homeautomation">
+    package="com.viba.home">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 
-    <uses-feature android:name="android.hardware.wifi"/>
+    <uses-feature android:name="android.hardware.wifi" />
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -19,16 +19,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Switches"></activity>
-        <activity android:name=".Profile" />
-        <service android:name=".TCPservice"/>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".VerifyPhoneActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".Register" />
-        <activity android:name=".Testing">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.viba.home.PinVerify"></activity>
+        <activity android:name="com.viba.home.AddDevice" />
+        <activity android:name="com.viba.home.Switches" />
+        <activity android:name="com.viba.home.Profile" />
+
+        <service android:name="com.viba.home.TCPservice" />
+
+        <activity android:name="com.viba.home.Testing" />
+        <activity android:name="com.viba.home.VerifyPhoneActivity" />
+        <activity android:name="com.viba.home.HomeActivity" />
+        <activity android:name="com.viba.home.Register" />
+        <activity android:name="com.viba.home.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

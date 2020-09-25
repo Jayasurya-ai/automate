@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "936028713445",
-    "firebase_url": "https://home-automation-4353d.firebaseio.com",
-    "project_id": "home-automation-4353d",
-    "storage_bucket": "home-automation-4353d.appspot.com"
+    "project_number": "527060981263",
+    "firebase_url": "https://homeauto-43e45.firebaseio.com",
+    "project_id": "homeauto-43e45",
+    "storage_bucket": "homeauto-43e45.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:936028713445:android:3c5104ef30898f23467f0c",
+        "mobilesdk_app_id": "1:527060981263:android:afdd3cd8fadc2781cc357a",
         "android_client_info": {
-          "package_name": "com.viba.homeautomation"
+          "package_name": "com.viba.home"
         }
       },
       "oauth_client": [
         {
-          "client_id": "936028713445-3kqa6378i7cie71h2trk6dn21curqphc.apps.googleusercontent.com",
+          "client_id": "527060981263-e5cb9rldkv0iu0bqsr43es2odelv0jqj.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBrwXrXDGOe10gsloKpkGIA2FJD591vO0E"
+          "current_key": "AIzaSyANN4WNFJIStAESUQEUvfhHFx-iGu92cLo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "936028713445-3kqa6378i7cie71h2trk6dn21curqphc.apps.googleusercontent.com",
+              "client_id": "527060981263-e5cb9rldkv0iu0bqsr43es2odelv0jqj.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

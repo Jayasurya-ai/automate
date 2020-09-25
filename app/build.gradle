@@ -7,7 +7,7 @@ android {
     useLibrary 'org.apache.http.legacy'
 
     defaultConfig {
-        applicationId "com.viba.homeautomation"
+        applicationId "com.viba.home"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1

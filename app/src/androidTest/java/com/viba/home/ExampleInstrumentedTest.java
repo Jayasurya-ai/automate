@@ -1,4 +1,4 @@
-package com.viba.homeautomation;
+package com.viba.home;
 
 import android.content.Context;
 

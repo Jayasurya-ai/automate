@@ -1,4 +1,4 @@
-package com.viba.homeautomation;
+package com.viba.home;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -43,15 +43,25 @@ import java.io.UnsupportedEncodingException;
 public class Testing extends AppCompatActivity {
     ImageView espdevice;
     String ip;
+    SharedPreferences sharedPref;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_testing);
+        sharedPref = getApplicationContext().getSharedPreferences(
+                "allInOne", Context.MODE_PRIVATE);
+        editor = sharedPref.edit();
         espdevice = findViewById(R.id.espdevice);
-       
 
+//        editor.putInt("s1",0);
+//        editor.putInt("s2",0);
+//        editor.putInt("s3",0);
+//        editor.putInt("s4",0);
+//        editor.commit();
+        startService(new Intent(getApplicationContext(),TCPservice.class));
 
         WifiManager wifi = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         wifi.setWifiEnabled(true);

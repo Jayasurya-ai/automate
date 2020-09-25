@@ -1,4 +1,4 @@
-package com.viba.homeautomation;
+package com.viba.home;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -91,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
                     GoogleSignInAccount account1 = GoogleSignIn.getLastSignedInAccount(MainActivity.this);
                     if (account1 != null) {
-                        Intent i = new Intent(MainActivity.this, HomeActivity.class);
+                        Intent i = new Intent(MainActivity.this, AddDevice.class);
                         HashMap<String, Object> jayasurya = new HashMap<>();
                         jayasurya.put("uname", account1.getDisplayName());
                         jayasurya.put("uemail", account1.getEmail());

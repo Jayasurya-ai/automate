@@ -87,6 +87,30 @@
                     android:textColorHint="@android:color/white" />
 
             </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Switch4"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/switch4"/>
+
+                <EditText
+                    android:id="@+id/editswi4"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_toEndOf="@+id/switch4"
+                    android:layout_centerVertical="true"
+                    android:textColorHint="@android:color/white" />
+
+            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"

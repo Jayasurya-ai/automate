@@ -1,5 +1,4 @@
-package com.viba.homeautomation;
-
+package com.viba.home;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +7,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.text.format.Formatter;
 import android.util.Log;
@@ -16,7 +14,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
@@ -29,7 +26,6 @@ import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -38,31 +34,35 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
-import java.util.HashMap;
 
 public class Profile extends AppCompatActivity {
-    EditText switchaedit,switchbedit,switchcedit;
+    EditText switchaedit,switchbedit,switchcedit,switchdedit;
     FirebaseAuth mAuth;
     Button addallswitches;
     String result,ip;
     String swita,switb,switc,switd;
-
+    SharedPreferences sharedPref;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        sharedPref = getApplicationContext().getSharedPreferences(
+                "allInOne", Context.MODE_PRIVATE);
+        editor = sharedPref.edit();
 
 
 
-        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Profile.this);
+//        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(Profile.this);
         switchaedit=findViewById(R.id.editswitcha);
         switchbedit=findViewById(R.id.editswib);
         switchcedit=findViewById(R.id.editswic);
+        switchdedit=findViewById(R.id.editswi4);
         addallswitches=findViewById(R.id.addall);
         WifiManager wm = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);
         ip = Formatter.formatIpAddress(wm.getConnectionInfo().getIpAddress());
-        startService(new Intent(getApplicationContext(),TCPservice.class));
+
 
 //        Intent intent = getIntent();
 //        result = intent.getStringExtra("ip");
@@ -72,7 +72,7 @@ public class Profile extends AppCompatActivity {
 
 
 
-         mAuth=FirebaseAuth.getInstance();
+        mAuth=FirebaseAuth.getInstance();
         FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
 
 
@@ -110,9 +110,9 @@ public class Profile extends AppCompatActivity {
 
         final DatabaseReference switchref=firebaseDatabase.getReference("SwitchesAdded");
 
-       addallswitches.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
+        addallswitches.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 //                   HashMap<String,Object>parsamap=new HashMap<>();
 //                   parsamap.put("switchnamea",String.valueOf(switchaedit.getText().toString()));
 //                   parsamap.put("switchnameb",String.valueOf(switchbedit.getText().toString()));
@@ -121,58 +121,60 @@ public class Profile extends AppCompatActivity {
 //                   switchref.child(mAuth.getCurrentUser().getUid()).updateChildren(parsamap);
 
 
-               SharedPreferences.Editor editor = prefs.edit();
+//               SharedPreferences.Editor editor = prefs.edit();
 
 
 
 
-               swita=switchaedit.getText().toString();
-               switb=switchbedit.getText().toString();
-               switc=switchcedit.getText().toString();
+                swita=switchaedit.getText().toString();
+                switb=switchbedit.getText().toString();
+                switc=switchcedit.getText().toString();
+                switd=switchdedit.getText().toString();
 
-               if(!TextUtils.isEmpty(swita)) {
-                   editor.putString("namea",swita);
-               }
-               else{
-                   swita="";
-                   editor.putString("namea",swita);
-               }
-               if(!TextUtils.isEmpty(switb)){
-                   editor.putString("nameb",switb);
+                if(!TextUtils.isEmpty(swita)) {
+                    editor.putString("namea",swita);
+                }
+                else{
+                    swita="";
+                    editor.putString("namea",swita);
+                }
+                if(!TextUtils.isEmpty(switb)){
+                    editor.putString("nameb",switb);
 
-               }
-               else {
-               switb="";
-               editor.putString("nameb",switb);
-               }
-               if(!TextUtils.isEmpty(switc)){
-                   editor.putString("namec",switc);
-               }
-               else{
-                   switc="";
-                   editor.putString("namec",switc);
-               }
-               if(!TextUtils.isEmpty(switd)){
-                   editor.putString("named",switd);
-               }
-               else{
-                   switd="";
-                   editor.putString("named",switd);
-               }
-               editor.commit();
+                }
+                else {
+                    switb="";
+                    editor.putString("nameb",switb);
+                }
+                if(!TextUtils.isEmpty(switc)){
+                    editor.putString("namec",switc);
+                }
+                else{
+                    switc="";
+                    editor.putString("namec",switc);
+                }
+                if(!TextUtils.isEmpty(switd)){
+                    editor.putString("named",switd);
+                }
+                else{
+                    switd="";
+                    editor.putString("named",switd);
+                }
+                editor.commit();
 
-               typec();
+                typec();
 
-               startActivity(new Intent(Profile.this,Switches.class));
-               finish();
+                startActivity(new Intent(Profile.this,Switches.class));
+                finish();
 
 
-           }
-       });
+            }
+        });
 
 
 
     }
+
 
 
 

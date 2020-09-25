@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.viba.homeautomation",
+  "applicationId": "com.viba.home",
   "variantName": "release",
   "elements": [
     {
